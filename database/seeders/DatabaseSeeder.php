@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
    *
    * @return void
    */
+
   public function run()
   {
     User::create([
@@ -22,16 +23,13 @@ class DatabaseSeeder extends Seeder
     ]);
 
     $this->call([
-      TextSeeder::class,
-      ContentsSeeder::class,
-      SitesSeeder::class,
-      ProductsSeeder::class,
       ClassificationSeeder::class,
+      ContentsSeeder::class,
       NosologySeeder::class,
+      ProductsSeeder::class,
       ReleaseFormsSeeder::class,
-      // VacancySeeder::class,
-      // NewslifestyleSeeder::class,
-      // ApplicationSeeder::class,
+      SitesSeeder::class,
+      TextSeeder::class,
     ]);
   }
 }

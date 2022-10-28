@@ -6,7 +6,6 @@ use App\Helpers\Helper;
 use App\Models\Classification;
 use App\Models\Nosology;
 use App\Models\Product;
-use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -38,13 +37,7 @@ class ProductsController extends Controller
     $products = Product::orderBy('title');
 
     if ($keyword) {
-      $products->select('products.id', 'products.nosology_id', 'products.classification_id', 'products.title', 'products.prescription', 'products.picture')
-        ->join('classifications', 'products.classification_id', '=', 'classifications.id')
-        ->join('nosologies', 'products.nosology_id', '=', 'nosologies.id')
-        ->where('products.title', 'like', '%' . $keyword . '%')
-        ->orWhere('products.prescription', 'like', '%' . $keyword . '%')
-        ->orWhere('classifications.title', 'like', '%' . $keyword . '%')
-        ->orWhere('nosologies.title', 'like', '%' . $keyword . '%');
+      $products->where('title', 'like', '%' . $keyword . '%');
     }
     if ($classification) {
       $products->where('classification_id', $classification);
@@ -84,24 +77,6 @@ class ProductsController extends Controller
     $data['popular-products'] = Product::latest()->take(9)->get();
 
     return view('pages.products.show', compact('data'));
-  }
-
-  public function downloadInstruction(Request $request)
-  {
-    $product = Product::where('slug', $request->slug)->first();
-
-    if (!$product->filename) {
-      return back();
-    }
-    $file = public_path('files/products/instructions/' . $product->filename);
-
-    $extension = pathinfo($file, PATHINFO_EXTENSION);
-
-    $headers = array(
-      'Content-Type: application/' . $extension,
-    );
-
-    return response()->download($file, $product->filename, $headers);
   }
 
   public function attention()

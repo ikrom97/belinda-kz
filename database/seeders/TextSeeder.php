@@ -14,69 +14,23 @@ class TextSeeder extends Seeder
    */
   public function run()
   {
-    $texts = [
-      [
-        'slug' => 'about-advantages-title',
-        'page' => 'about',
-        'text' => 'title',
-      ], [
-        'slug' => 'about-advantage-1',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-advantage-2',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-advantage-3',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-advantage-4',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-advantage-5',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-advantage-6',
-        'page' => 'about',
-        'text' => 'item',
-      ], [
-        'slug' => 'about-mission-vision-title',
-        'page' => 'about',
-        'text' => 'title',
-      ], [
-        'slug' => 'about-global-presence-title',
-        'page' => 'about',
-        'text' => 'title',
-      ], [
-        'slug' => 'products-title',
-        'page' => 'products',
-        'text' => 'title',
-      ], [
-        'slug' => 'products-similar-title',
-        'page' => 'products',
-        'text' => 'title',
-      ], [
-        'slug' => 'products-popular-title',
-        'page' => 'products',
-        'text' => 'title',
-      ], [
-        'slug' => 'carrier-vacancies-title',
-        'page' => 'carrier',
-        'text' => 'title',
-      ], [
-        'slug' => 'newslifestyle-title',
-        'page' => 'newslifestyle',
-        'text' => 'title',
-      ], [
-        'slug' => 'contacts-global-presence',
-        'page' => 'contacts',
-        'text' => 'title',
-      ],
-    ];
+    $texts = array(
+      array('id' => '1', 'slug' => 'about-advantages-title', 'page' => 'about', 'text' => 'НАШИ ПРЕИМУЩЕСТВА', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:01:31', 'deleted_at' => NULL),
+      array('id' => '2', 'slug' => 'about-advantage-1', 'page' => 'about', 'text' => 'ЭФФЕКТИВНОСТЬ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:01:59', 'deleted_at' => NULL),
+      array('id' => '3', 'slug' => 'about-advantage-2', 'page' => 'about', 'text' => 'ИННОВАЦИИ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:02:08', 'deleted_at' => NULL),
+      array('id' => '4', 'slug' => 'about-advantage-3', 'page' => 'about', 'text' => 'ПРЕДСТАВЛЕНИЕ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:02:18', 'deleted_at' => NULL),
+      array('id' => '5', 'slug' => 'about-advantage-4', 'page' => 'about', 'text' => 'СОТРУДНИЧЕСТВО', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:02:28', 'deleted_at' => NULL),
+      array('id' => '6', 'slug' => 'about-advantage-5', 'page' => 'about', 'text' => 'РАБОТА В КОМАНДЕ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:02:43', 'deleted_at' => NULL),
+      array('id' => '7', 'slug' => 'about-advantage-6', 'page' => 'about', 'text' => 'КОМПЕТЕНТНОСТЬ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:02:51', 'deleted_at' => NULL),
+      array('id' => '8', 'slug' => 'about-mission-vision-title', 'page' => 'about', 'text' => 'НАША МИССИЯ И ВИДЕНИЕ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:01:02', 'deleted_at' => NULL),
+      array('id' => '9', 'slug' => 'about-global-presence-title', 'page' => 'about', 'text' => 'ГЛОБАЛЬНОЕ ПРИСУТСТВИЕ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:03:01', 'deleted_at' => NULL),
+      array('id' => '10', 'slug' => 'products-title', 'page' => 'products', 'text' => 'ВСЕ ПРОДУКТЫ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:10:22', 'deleted_at' => NULL),
+      array('id' => '11', 'slug' => 'products-similar-title', 'page' => 'products', 'text' => 'ПОХОЖИЕ ПРОДУКТЫ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:10:42', 'deleted_at' => NULL),
+      array('id' => '12', 'slug' => 'products-popular-title', 'page' => 'products', 'text' => 'ПОПУЛЯРНЫЕ ПРОДУКТЫ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:10:53', 'deleted_at' => NULL),
+      array('id' => '13', 'slug' => 'carrier-vacancies-title', 'page' => 'carrier', 'text' => 'ТЕКУЩИЕ ВАКАНСИИ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:14:55', 'deleted_at' => NULL),
+      array('id' => '14', 'slug' => 'newslifestyle-title', 'page' => 'newslifestyle', 'text' => 'Новости и образ жизни', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:15:28', 'deleted_at' => NULL),
+      array('id' => '15', 'slug' => 'contacts-global-presence', 'page' => 'contacts', 'text' => 'ГЛОБАЛЬНОЕ ПРИСУТСТВИЕ', 'created_at' => '2022-09-14 18:09:25', 'updated_at' => '2022-09-14 19:16:02', 'deleted_at' => NULL)
+    );
 
     foreach ($texts as $text) {
       Text::create([
