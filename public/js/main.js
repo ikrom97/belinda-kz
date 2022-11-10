@@ -23,8 +23,8 @@ searchInput.addEventListener('input', () => {
 
 searchInput.addEventListener('focusout', () => {
   searchInput.setAttribute('size', searchInput.getAttribute('placeholder').length);
-  searchInput.value = '';
-  document.querySelector('.search-result-holder').innerHTML = '';
+  // searchInput.value = '';
+  // document.querySelector('.search-result-holder').innerHTML = '';
 });
 
 hamburgerEl.addEventListener('click', () => {
