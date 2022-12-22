@@ -7,6 +7,7 @@ const submitEl = document.querySelector('[data-action="submit"]');
 simditors.forEach((simditor) => {
   const simdit = new Simditor({
     textarea: simditor,
+    cleanPaste: false,
     toolbar: [
       'title',
       'bold',
